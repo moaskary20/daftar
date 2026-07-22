@@ -11,11 +11,17 @@
 ## التثبيت
 
 ```bash
-composer install
+composer install --no-interaction --prefer-dist
 cp .env.example .env
 php artisan key:generate
 php artisan migrate --seed
 php artisan storage:link
+```
+
+على السيرفر يُفضّل:
+
+```bash
+composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist
 ```
 
 بيانات الدخول الافتراضية بعد الـ seed:
