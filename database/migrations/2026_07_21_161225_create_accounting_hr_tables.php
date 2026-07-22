@@ -135,8 +135,8 @@ return new class extends Migration
                 $table->timestamp('posted_at')->nullable();
                 $table->timestamps();
 
-                $table->index(['source_fund_type', 'source_fund_id']);
-                $table->index(['destination_fund_type', 'destination_fund_id']);
+                $table->index(['source_fund_type', 'source_fund_id'], 'ft_source_fund_index');
+                $table->index(['destination_fund_type', 'destination_fund_id'], 'ft_destination_fund_index');
             });
         }
 

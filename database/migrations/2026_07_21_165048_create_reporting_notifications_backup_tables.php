@@ -30,7 +30,7 @@ return new class extends Migration
             $table->decimal('unit_cost', 14, 4)->default(0);
             $table->timestamps();
 
-            $table->index(['warehouse_id', 'product_id', 'product_variant_id']);
+            $table->index(['warehouse_id', 'product_id', 'product_variant_id'], 'inventory_batches_stock_index');
             $table->index(['expiry_date', 'quantity']);
         });
 
