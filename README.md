@@ -24,6 +24,12 @@ php artisan storage:link
 composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist
 ```
 
+إذا فشل `migrate` على MySQL بسبب جداول موجودة جزئيًا (تثبيت أولي بلا بيانات مهمة):
+
+```bash
+php artisan migrate:fresh --seed
+```
+
 بيانات الدخول الافتراضية بعد الـ seed:
 
 - البريد: `admin@daftar.test`
